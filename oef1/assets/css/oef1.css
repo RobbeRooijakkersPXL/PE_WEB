@@ -1,0 +1,395 @@
+/*
+    naam: Robbe Rooijakkers
+*/
+
+/*
+Hint: 
+    (1) Omzetten naar hoofdletters:
+            text-transform: uppercase;
+    (2) Schaduw in figcaption
+            text-shadow: 2px 2px 2px black;
+    (3) Eerste 3 lijnen tonen van de paragrafen
+            line-height:1em;
+	        height:3em;
+    (4) Herschaling van de figuren 
+            aspect-ratio: 400 / 225;
+        s    object-fit:cover;
+*/
+
+        body{
+                width: 1200px;
+                margin: auto;
+                padding: 0;
+        }
+
+      
+
+        /*NAV*/
+
+        .gone{
+                display: none;
+        }
+
+        nav {
+                width: 250px;
+                font-size: 1.4rem;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background-color: white;
+                border: 1px solid orange;
+                border-radius: 5px;
+                z-index: 1000;
+                text-align: left;
+        }
+
+        
+        nav a{
+                color: black;
+                text-decoration: none;
+                display: block;
+                padding: 5px;
+        }
+
+        nav ul{
+                list-style: none;       
+                padding: 0px;
+                margin: 0px;
+
+        }
+        
+        nav li{
+                margin-bottom: 10px;
+                color: black;
+                
+        }
+
+        nav li:first-child a{
+                background-color: orange;
+                color: white;
+                text-transform: uppercase;
+                display: block;
+                padding: 5px;
+                
+        }
+
+        nav img{
+                margin-left: 5px;
+
+        }
+        
+        .img_natuur{
+                width: 20px;
+                height: 20px; 
+        }
+
+        nav input[type="text"]{
+                width: 70px;
+                border-radius: 5px;
+                padding: 5px;
+                margin-left: 5px;
+        }
+
+        /*FOOTER*/
+        footer{
+               display: block;
+               text-align: center;
+               background-color: orange;
+                color: white;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                
+        }
+        
+        /*HEADERS*/
+        header{
+                text-transform: uppercase;
+                text-align: left;
+                border-bottom: 3px solid orange;
+                
+            
+        }
+        header h1{
+                font-size: 3rem;
+        }
+
+        header h2{
+                font-size: 2rem;
+                border-left: 15px solid orange;
+                margin-left: 0.5rem;
+                padding-left: 10px;
+                
+        }
+  
+        /*FOTOS*/
+        figure{
+                position: relative;
+                margin: 0;
+               
+                
+                
+                
+        }
+
+        figure img{
+                display: block;
+                max-width: 100%;
+                border-radius: 10px;
+                height: auto;
+                
+        }
+
+        figcaption{
+                
+                position: absolute;
+                text-shadow: 2px 2px 2px black;
+                bottom: 10px;
+                right: 10px;
+                color: white;
+                
+        }
+
+        /*ARTIEKELS 1,2 en 3*/
+        .article {
+                display: flex;
+                
+        }
+
+
+        .article_1{
+                width: 60%;
+                float: left;
+                display: block;
+                
+        }
+
+        .article_1 figure{
+                width: 40%;
+                float: left;     
+        }
+        
+        .article_1 p{
+                text-align: justify;
+                margin-right: 10%;
+        }
+       
+        .article_2{
+                
+                width: 40%;
+                float: right;
+                display: block;
+        }
+
+        
+
+        .article_3{
+                width: 40%;
+                float: right;
+                display: block;
+        }
+
+
+        /*Artiekels 4, 5 en 6*/
+        .center{
+                margin: 20px auto;
+                row-gap: 3px;
+                clear: both;
+        }
+
+        .article_4 , .article_5 , .article_6{
+                width: 30%;
+                float: left;
+                margin: 5px;
+                
+                
+        }
+
+        .article_4 p, .article_5 p, .article_6 p{
+                line-height:1em;
+                height:3em;
+                overflow: hidden;
+                
+        }
+
+        .center img{
+                aspect-ratio: 400 / 225;
+                object-fit:cover;
+                
+        }
+
+@media (max-width: 1600px) {
+        footer {
+                display: none;
+        }
+        .gone{
+                display: contents;
+        }
+
+        
+        header h1{
+                margin: 0;
+        }
+
+        body{
+                width: 80%;
+                margin: auto;
+                padding: 0;
+        }
+        /*NAV*/
+        nav {
+                
+                width: 100%;
+                font-size: 1.4rem;
+                position: static;
+                background-color: white;
+                border: 0px solid white;
+        }
+
+        
+      
+        nav ul{
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+        }
+        nav li{
+                float: left;
+                
+        }
+        
+
+        nav li:first-child a{
+                background-color: orange;
+                color: white;
+                text-transform: uppercase;
+                display: block;
+                
+                
+        }
+
+        .img_natuur{
+                display: none;
+        }
+
+        nav input[type="text"]{
+                width: 70px;
+                border-radius: 5px;
+                padding: 5px;
+                
+        }
+
+}
+@media (max-width: 1200px) {
+
+
+        /* Header verwijderen*/
+        header{
+                display: none;
+        }
+
+        /*Nav veranderen*/
+        nav{
+                width: 100%;
+                text-decoration: underline;
+                border-bottom: 3px solid orange;             
+        }
+        nav ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        }
+
+        nav li{
+                width: 100%;
+                text-align: center;
+        }
+
+        nav .input_nav{
+                display: none;
+        }
+       
+        /*Artikels veranderen*/
+
+        figure figcaption{
+                display: none;
+        }
+
+        /*1, 2 en 3*/
+
+        .center2{
+                margin: 20px auto;
+                row-gap: 3px;
+                clear: both;
+        }
+
+        .article_1 , .article_2 , .article_3{
+                width: 30%;
+                float: left;
+                margin: 5px;
+        }
+
+        
+        .article_1{
+                display: flex;
+                flex-direction: column;
+        }
+        .article_1 figure{
+                width: 100%;
+                display: block;
+                
+        }
+
+        .article_1 p{
+                width: 100%;
+                margin-right: 0px;
+
+        }
+        
+        .article_1 p, .article_2 p, .article_3 p{
+                line-height:1em;
+                height:3em;
+                overflow: hidden;
+                
+        }
+
+        .center2 img{
+                aspect-ratio: 400 / 225;
+                object-fit:cover;
+                
+        }
+
+
+}
+
+@media (max-width: 900px) {
+        body {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            width: 100%;
+            margin: 0; 
+            padding: 0; 
+        }
+    
+        .article_1, .article_2, .article_3, .article_4, .article_5, .article_6 {
+            width: 100%; 
+            display: flex; 
+            flex-direction: column; 
+            margin: 0; 
+        }
+    
+        .article_1 img, .article_2 img, .article_3 img, .article_4 img, .article_5 img, .article_6 img {
+            width: 100%; 
+            height: auto; 
+            margin: 0; 
+        }
+    
+        .article_1 p, .article_2 p, .article_3 p, .article_4 p, .article_5 p, .article_6 p {
+            display: none; 
+        }
+    }
+
+
+

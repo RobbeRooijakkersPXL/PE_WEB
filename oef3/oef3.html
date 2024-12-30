@@ -1,0 +1,68 @@
+<!-- naam: Robbe Rooijakkers                 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mussen vs Vinken</title>
+  <link rel="stylesheet" href="assets/css/oef3.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mussen vs Vinken</h1>
+    <form action="waarneming.html" method="get">
+      <fieldset>
+        <legend>Algemeen</legend>
+
+
+        <label for="date">Datum:</label>
+        <input type="date" id="date" name="datum">
+        <br>
+
+
+        <label for="time">Tijd:</label>
+        <select id="time" name="tijd">
+          <option value="0_6">0u - 6u</option>
+          <option value="6_12">6u - 12u</option>
+          <option value="12_18">12u - 18u</option>
+          <option value="18_24">18u - 24u</option>
+        </select>
+        <br>
+
+
+        <label>Neerslag:</label>
+        <input type="radio" name="neerslag" value="geen" checked> geen
+        <input type="radio" name="neerslag" value="matig"> matig
+        <input type="radio" name="neerslag" value="overvloedig"> overvloedig
+      </fieldset>
+
+      <fieldset>
+        <legend>Vogels</legend>
+        <div class="bird-row">
+          <img src="assets/images/mus.png" alt="Mussen" class="bird-img">
+          <label for="sparrows">#Mussen:</label>
+          <input type="number" id="sparrows" name="aantal_mus" value="0" min="0" max="10">
+          <label>Zeker:</label>
+          <input type="range" id="mus-certainty" name="zekerheid_mus" value="50" min="0" max="100">
+        </div>
+
+
+        <div class="bird-row">
+          <img src="assets/images/vink.png" alt="Vinken" class="bird-img">
+          <label for="finches">#Vinken:</label>
+          <input type="number" id="finches" name="aantal_vink" value="0" min="0" max="10">
+          <label>Zeker:</label>
+          <input type="range" id="vink-certainty" name="zekerheid_vink" value="50" min="0" max="100">
+        </div>
+      </fieldset>
+
+      <fieldset class="actions">
+        <legend>Acties</legend>
+        <button type="submit">registreer</button>
+        <button type="reset">maak leeg</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
